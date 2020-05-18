@@ -14,4 +14,4 @@ const solution = (string) => {
 }
 console.log(solution('qwerty'));
 
-//this only works for even-numbered strings
+//this only works for even-numbered strings...and references stack overflow 'How can I split a string into segments of n characters?' 
