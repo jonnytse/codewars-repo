@@ -27,7 +27,21 @@
 // An integer array of length 0 < arr < 1000. The numbers in the array can be any integer positive or negative.
 
 // Output:
-// The lowest index N where the side to the left of N is equal to the side to the right of N. If you do not find an index that fits these rules, then you will return -1.
+// The lowest index N where the side to the left of N is equal to the side to the right of N. If you do not find 
+// an index that fits these rules, then you will return -1.
 
 // Note:
 // If you are given an array with multiple answers, return the lowest correct index.
+
+
+const findNumber = (arr, k) => {
+    let newArray = arr.filter((value, index, array) => {
+        if (newArray[value]=== k) {
+            console.log('yes')
+        } else {
+            console.log('no')
+        }
+    })
+    return newArray;
+} 
+console.log(findNumber([1,2,3,4,5],1));
