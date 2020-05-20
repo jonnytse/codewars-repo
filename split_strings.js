@@ -10,8 +10,30 @@
 
 
 const solution = (string) => {
-    return (string.match(/.{1,2}/g));    
+    if (string.length % 2 === 0) {
+        return (string.match(/.{1,2}/g));    
+    } else {
+        return (string.match(/.{1,2}/g).concat('_'))
+    }
 }
-console.log(solution('qwerty'));
+console.log(solution('qwertyi'));
+// ... this only works for even-numbered strings...and references stack overflow 'How can I split a string into segments of n characters?'
 
-//this only works for even-numbered strings...and references stack overflow 'How can I split a string into segments of n characters?' 
+
+
+const solution = (string) => {
+    let solutionArray = []
+    let stringSplit = string.split('')
+    let lastCharacter = stringSplit[string.length - 1]
+    if(stringSplit.length !== 0) {
+       for (let i = 0; i < stringSplit.length - 1; i += 2) {
+           solutionArray.push(stringSplit[i].concat(stringSplit[i + 1]))
+       }
+       solutionArray.push(lastCharacter.concat('_'))
+    }    
+    return solutionArray;
+}
+console.log(solution('qwertyi'));
+
+// this only works for odd-numbered string length!
+ 
