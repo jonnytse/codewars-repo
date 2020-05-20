@@ -31,7 +31,7 @@ const solution = (string) => {
        }
        solutionArray.push(lastCharacter.concat('_'));
     } else {
-        solutionArray.push(stringSplit[i].concat(stringSplit[i + 1]));
+        solutionArray.pop() // this code should remove the final element of the solutionArray in an even-lengthed string, but doesn't?
     }   
     return solutionArray;
 }
