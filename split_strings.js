@@ -30,10 +30,12 @@ const solution = (string) => {
            solutionArray.push(stringSplit[i].concat(stringSplit[i + 1]));
        }
        solutionArray.push(lastCharacter.concat('_'));
-    }    
+    } else {
+        solutionArray.push(stringSplit[i].concat(stringSplit[i + 1]));
+    }   
     return solutionArray;
 }
-console.log(solution('qwertyi'));
+console.log(solution('qwerty'));
 
 // this only works for odd-numbered string length!
  
