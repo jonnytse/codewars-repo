@@ -12,7 +12,7 @@
 
 
 
-//***** My horrible and long-assed version to pass all the tests. Jee-ZUS.
+// ***** My horrible and long-assed version to pass all the tests. Jee-ZUS.
 
 const solution = (string) => {
     let solutionArray = []
@@ -31,4 +31,12 @@ const solution = (string) => {
     return solutionArray;
    }
    console.log(solution('qwerty'));
+
+
+// //BEAST MODE SOLUTION (courtesy of CodeWars)
+
+// const solution = (string) => {
+//     return (string.length % 2 ? string + '_' : string).match(/../g);
+//   }
+// console.log(solution('qwertyi'));  
  
